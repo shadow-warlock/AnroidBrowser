@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:id="@+id/mainContainer"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                  android:orientation="vertical"
+                    tools:context=".MainActivity">
+
+                <LinearLayout android:layout_width="fill_parent"
+                              android:id="@+id/topMenu"
+                              android:orientation="horizontal"
+                              android:descendantFocusability="beforeDescendants"
+                              android:focusableInTouchMode="true"
+                              android:layout_height="wrap_content">
+                    <Button android:layout_width="wrap_content"
+                            android:id="@+id/searchButton"
+                            android:layout_height="wrap_content" android:background="@android:drawable/ic_menu_search"/>
+                    <EditText android:layout_width="0dp"
+                              android:textSize="20sp"
+                              android:paddingLeft="5dp"
+                              android:paddingRight="5dp"
+                              android:paddingTop="5dp"
+                              android:paddingBottom="5dp"
+                              android:layout_marginLeft="5dp"
+                              android:layout_marginTop="5dp"
+                              android:layout_marginBottom="5dp"
+                              android:layout_marginRight="5dp"
+                              android:ellipsize="start"
+                              android:layout_weight="5"
+                              android:id="@+id/searchTextView"
+                              android:inputType="text"
+                              android:background="@drawable/edit_text_style"
+                              android:layout_height="wrap_content" android:layout_gravity="center_vertical"/>
+                    <Button android:layout_width="wrap_content"
+                            android:id="@+id/profileButton"
+                            android:layout_height="wrap_content"
+                            android:background="@android:drawable/ic_menu_my_calendar"/>
+                </LinearLayout>
+
+                <ProgressBar
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="fill_parent"
+                        android:layout_height="4dp"
+                        android:progress="0"
+                        android:id="@+id/progressBar"/>
+
+                <RelativeLayout android:layout_width="match_parent"
+                                android:id="@+id/container"
+                                android:layout_weight="1"
+                                android:layout_height="0dp">
+
+                </RelativeLayout>
+
+
+
+            <LinearLayout android:layout_width="fill_parent"
+                          android:id="@+id/bottomMenu"
+                          android:layout_height="wrap_content">
+                <Button android:layout_width="wrap_content"
+                        android:id="@+id/back"
+                        android:layout_height="wrap_content" android:background="@android:drawable/ic_menu_revert"/>
+                <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"/>
+                <Button android:layout_width="wrap_content"
+                        android:id="@+id/best"
+                        android:layout_height="wrap_content" android:background="@android:drawable/btn_star_big_off"/>
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <Button android:layout_width="wrap_content"
+                        android:id="@+id/add"
+                        android:layout_height="wrap_content" android:background="@android:drawable/ic_menu_add"/>
+                <Space android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"/>
+                <Button android:layout_width="wrap_content"
+                        android:id="@+id/all"
+                        android:layout_height="wrap_content" android:background="@android:drawable/ic_menu_agenda"/>
+            </LinearLayout>
+        </LinearLayout>
+
+</RelativeLayout>

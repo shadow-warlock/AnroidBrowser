@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.anroidbrowser.browser" >
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+            android:name=".MainApplication"
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        tools:targetApi="m">
+        <activity
+            android:name=".activities.MainActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <data android:scheme="http"/>
+                <data android:scheme="https"/>
+                <category android:name="android.intent.category.BROWSABLE" />
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.PageFindActivity"
+                  android:configChanges="orientation|screenSize">
+
+        </activity>
+        <activity
+                android:name=".activities.RegistrationActivity"
+                android:configChanges="orientation|screenSize"
+                android:label="@string/app_name" >
+        </activity>
+        <activity
+                android:name=".activities.InputActivity"
+                android:configChanges="orientation|screenSize"
+                android:label="@string/app_name" >
+        </activity>
+        <activity
+                android:name=".activities.PersonActivity"
+                android:theme="@style/AppTheme2"
+                android:configChanges="orientation|screenSize"
+                android:label="@string/person" >
+        </activity>
+        <activity
+                android:name=".activities.HistoryActivity"
+                android:theme="@style/AppTheme2"
+                android:configChanges="orientation|screenSize"
+                android:label="@string/menu_item_history" >
+        </activity>
+        <activity
+                android:name=".activities.BestActivity"
+                android:theme="@style/AppTheme2"
+                android:configChanges="orientation|screenSize"
+                android:label="@string/menu_item_history" >
+        </activity>
+        <activity
+                android:name=".activities.DownloadActivity"
+                android:theme="@style/AppTheme2"
+                android:configChanges="orientation|screenSize"
+                android:label="@string/download" >
+        </activity>
+    </application>
+
+</manifest>
